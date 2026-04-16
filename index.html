@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR FIGHTER</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/logo.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container-fluid vh-100 d-flex flex-column main-container">
+
+    <!-- CANVAS -->
+    <canvas id="canvas"></canvas>
+
+    <!-- HUD (ÚNICO Y FUNCIONAL) -->
+    <div class="hud-panel">
+        <h5>HUD</h5>
+        <p>Score: <span id="score">0</span></p>
+        <p>Objetos: <span id="objetos">0</span></p>
+        <p>Eliminadas: <span id="eliminadas">0</span></p>
+        <p>Aliados eliminados: <span id="aliados">0</span></p>
+        <p>Enemigos eliminados: <span id="enemigos">0</span></p>
+        <button id="resetBtn" class="btn btn-sm btn-info mt-2">Reset</button>
+    </div>
+
+    <button id="showHudBtn" class="btn btn-sm btn-info" style="display:none; position:absolute; top:20px; right:20px; z-index:10;">
+    HUD
+    </button>
+
+    <button id="rulesBtn"
+        class="btn btn-sm btn-warning"
+        style="position:absolute; top:60px; right:20px; z-index:10;">
+        Reglas
+    </button>
+
+    <!-- PANEL DE REGLAS -->
+    <div id="rulesPanel" style="
+        display:none;
+        position:absolute;
+        top:100px;
+        right:20px;
+        width:260px;
+        background: rgba(0,0,0,0.8);
+        color:#00f7ff;
+        padding:15px;
+        border-radius:10px;
+        z-index:10;
+        font-size:13px;
+    ">
+        <h6>Reglas</h6>
+        <p>Ganas puntos eliminando enemigos.</p>
+        <p>Pierdes puntos eliminando aliados.</p>
+        <hr>
+        <p><strong>Enemigos:</strong></p>
+        <p>Tie Fighter: +10</p>
+        <p>Tie Bomber: +50</p>
+        <p>Star Destroyer: +100</p>
+        <hr>
+        <p><strong>Aliados:</strong></p>
+        <p>X-Wing: -10</p>
+        <p>Y-Wing: -50</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-2 small mt-auto">
+        <p class="mb-1">Hernandez Ortiz Addi - 2320084</p>
+        <p class="mb-0">Quezada Quiterio Marcelo - 23200881</p>
+    </footer>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
